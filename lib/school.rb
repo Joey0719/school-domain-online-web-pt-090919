@@ -10,9 +10,20 @@ class School
   end 
   
   def add_student(name, grade)
-    if @roster[grade] !=NIL
+    if @roster[grade] != nil 
       @roster[grade] << name
     else
       @roster[grade]
-      
+    end
+  end 
+  
+  def grade(grade)
+    @roster[grade]
+  end
+  
+  def sort
+    @roster.each do |key, value|
+      value.sort!
+    end 
+  end
       
